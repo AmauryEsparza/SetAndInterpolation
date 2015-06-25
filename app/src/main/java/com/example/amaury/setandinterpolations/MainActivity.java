@@ -1,17 +1,25 @@
 package com.example.amaury.setandinterpolations;
 
-import android.support.v7.app.ActionBarActivity;
+import android.app.Activity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
+import android.widget.ImageView;
 
 
-public class MainActivity extends ActionBarActivity {
+public class MainActivity extends Activity {
+
+    ImageView mImage;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        mImage = (ImageView) findViewById(R.id.imageView);
     }
 
     @Override
@@ -34,5 +42,11 @@ public class MainActivity extends ActionBarActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    public void interpolationExample(View v){
+        Animation anim = AnimationUtils.loadAnimation(this, R.anim.interpolation_anim);
+        mImage.startAnimation(anim);
+
     }
 }

@@ -9,21 +9,22 @@
     tools:context=".MainActivity">
 
     <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:src="@drawable/ic_action_github"
         android:layout_alignParentEnd="@+id/button"
         android:layout_alignEnd="@+id/button"
-        android:layout_marginTop="73dp"
-        android:id="@+id/imageFrame"/>
+        android:layout_marginTop="100dp"
+        android:id="@+id/imageView"/>
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button"
+        android:text="Interpolation"
         android:id="@+id/button"
+        android:onClick="interpolationExample"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="100dp" />
